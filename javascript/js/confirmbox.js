@@ -1,7 +1,5 @@
 
-
 //first we are going to create a fucntion for confirmation box
-
 function myfunc() {
     let confirmdat  = confirm("do you want to visit the website");
     if (confirmdat == true) {
