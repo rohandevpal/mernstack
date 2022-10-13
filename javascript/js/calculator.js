@@ -15,7 +15,9 @@ for (i = 0; i < 14; i++) {
 
 function myFunction(ele) {
     var id = ele.id;
+    
     input.value += id;
+
        
 }
 
