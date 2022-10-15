@@ -19,7 +19,6 @@ fetchBtn.addEventListener('click',()=>{
 });
 
 
-
 //Check how many times an Element appears in an Array 
 
 const arr = [1,2,4,4,4,2,5,6,7];
