@@ -31,9 +31,6 @@ AC.addEventListener('click', () => {
 
 
 
-// find power 
-
-
 
 
 
