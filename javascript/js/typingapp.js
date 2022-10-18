@@ -44,6 +44,7 @@ let endTime;
 
 //function for get the string from the array
 const  showtext = () =>{
+    //count time
     let randomText = Math.floor(Math.random()*setOfWords.length)
     textfortype.textContent = setOfWords[randomText];
     let date = new Date();
@@ -51,15 +52,16 @@ const  showtext = () =>{
     startbtn.textContent = "Done";
 }
 
-
+// end fucntion
 const endgame = () =>{
+    // count Time
     let date = new Date();
     endTime = date.getTime();
     let totalTime = ((endTime - startTime) / 1000);
     console.log(totalTime);
 
+    //count words
     let totalwords = typingarea.value;
-     
     let wordcount = wordcounter(totalwords)
     console.log(wordcount);
 
@@ -68,19 +70,20 @@ const endgame = () =>{
     console.log("speed" + speed);
 
     // textfortype.textContent = "your total speed of typing" + " " + speed;
-    let finalmsg = "your total speed of typing" + " " + speed + " ";
+    let finalmsg = "your total speed of typing" + " " + speed + "";
     finalmsg += comparewords(textfortype.textContent, totalwords);
-
     textfortype.textContent = finalmsg;
+    
 
 }
 
+//function for comparing both the strings 
 const comparewords = (str1, str2) =>{
     let words1 = str1.split(" ");
     let words2 = str2.split(" ");
     let count = 0;
 
-
+    //check bot the words are same or not
     words1.forEach( (item, index) =>{
             if (item == words2[index]) {
                 count++;                
@@ -88,7 +91,7 @@ const comparewords = (str1, str2) =>{
     })
 
     let erorwords = (words1.length - count);
-    return(count + " " + "correct out of " + " " + words1.length + "words and total number of error are " + erorwords + " . ");
+    return(","+count + " " + "correct out of " + " " + words1.length + "words and total number of error are " + erorwords + " . ");
 
 }
 
@@ -100,6 +103,7 @@ const wordcounter = (str)=>{
     return words;
 
 }
+
 //task one
 startbtn.addEventListener('click', ()=>{
     if (startbtn.textContent == 'Start') {
