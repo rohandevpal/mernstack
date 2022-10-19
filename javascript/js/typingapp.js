@@ -73,7 +73,6 @@ const endgame = () =>{
     let finalmsg = "your total speed of typing" + " " + speed + "";
     finalmsg += comparewords(textfortype.textContent, totalwords);
     textfortype.textContent = finalmsg;
-    
 
 }
 
